@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.track {
+    width: 100%;
+    height: 120px;
+    background-color: #333; /* Dark track color */
+    border: 5px solid #000;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+/* 🏎️ CAR STYLING 🏎️ */
+.car {
+    position: absolute;
+    height: 35px; /* Slightly reduced height */
+    width: 50px; /* Increased width to be more car-like */
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    top: 10px; 
+    left: 0;
+    transition: left 0.5s ease-out; 
+    border-radius: 8px; /* Rounded body */
+    z-index: 10;
+}
+
+/* Car A (Red) */
+#carA {
+    background-color: #E63946; /* Brighter Red */
+    top: 10px; 
+}
+
+/* Car B (Blue) */
+#carB {
+    background-color: #457B9D; /* Steel Blue */
+    top: 75px; /* Adjusted position due to changed car size */
+}
+
+/* Common element for the 'windshield/roof' */
+.car::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 30px;
+    height: 35px; /* Same height as car */
+    background: rgba(255, 255, 255, 0.4); /* Light transparent color for 'glass' */
+    border-radius: 4px;
+    z-index: 11; /* Ensure it's on top */
+}
+
+/* Common element for the 'spoiler' */
+.car::after {
+    content: "";
+    position: absolute;
+    top: -5px; /* Position above the car */
+    right: 0px;
+    width: 5px;
+    height: 45px; /* Taller element */
+    background: #1D3557; /* Dark spoiler color */
+    z-index: 9; /* Ensure it's behind the body */
+    border-radius: 2px;
+}
+/* END CAR STYLING */
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.mobile-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #ff5722; /* Orange color */
+    width: 80%;
+    margin-top: 15px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 30px;
+}
